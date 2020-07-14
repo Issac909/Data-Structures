@@ -9,17 +9,67 @@ return elements in Last In First Out order.
    Make sure the Stack tests pass.
 3. What is the difference between using an array vs. a linked list when 
    implementing a Stack?
+You can only add a predetermined amount of elements inside an array. Where as with a linked list, you can add as many 
+as you want to the tail end of the list. 
 """
+
+# 1
 class Stack:
     def __init__(self):
         self.size = 0
         # self.storage = ?
+        self.storage = []
 
     def __len__(self):
-        pass
+        return len(self.storage)
 
     def push(self, value):
-        pass
+        return self.storage.append(value)
 
     def pop(self):
-        pass
+        if len(self) > 0:
+            return self.storage.pop()
+        else: 
+            return None
+
+# 2
+class Node:
+    def __init__(self, value = None, next_node = None):
+        self.value = value
+        self.next_node = next_node
+        
+class LLStack:
+    def __init__(self):
+        self.size = 0
+        # self.storage = ?
+        self.first_node = None
+        self.last_node = None
+
+    def __len__(self):
+        return len(self.size)
+
+    def push(self, value):
+        self.size += 1
+        new_node = Node(value)
+        
+        if self.first_node == None:
+            self.first_node = new_node
+            self.last_node = new_node
+            
+        self.last_node.next_node = new_node
+        self.last_node - new_node
+
+    def pop(self):
+        if self.size > 0:
+            node_to_pop = self.last_node
+            current_node = self.first_node
+        
+        elif node_to_pop != current_node:
+            while current_node.next_node != node_to_pop:
+                current_node = current_node.next_node
+                
+        elif self.size == 0:
+            self.first_node = None
+            
+
+            
