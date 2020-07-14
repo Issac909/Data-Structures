@@ -9,12 +9,11 @@ return elements in Last In First Out order.
    Make sure the Stack tests pass.
 3. What is the difference between using an array vs. a linked list when 
    implementing a Stack?
-You can only add a predetermined amount of elements inside an array. Where as with a linked list, you can add as many 
-as you want to the tail end of the list. 
+You can only add a predetermined amount of elements inside an array using index. Where as with a linked list, you can add as many as you want, and with specifically stacks, to the head of the list or LIFO. You can imagine adding and removing pancakes from a hotstack.
 """
 
 # 1
-class Stack:
+class ArrStack:
     def __init__(self):
         self.size = 0
         # self.storage = ?
@@ -72,4 +71,6 @@ class LLStack:
             self.first_node = None
             
 
+arr_stack = ArrStack()
+LLStack = LLStack()
             
