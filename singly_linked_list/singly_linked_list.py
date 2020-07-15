@@ -9,7 +9,6 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.size = 0
-        # self.storage = ?
         self.first_node = None
         self.last_node = None
 
