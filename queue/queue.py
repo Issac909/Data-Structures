@@ -42,7 +42,7 @@ class ArrQueue:
             return self.storage.pop(0)
         
 # 2 
-class LLQueue:
+class Queue:
     def __init__(self):
         self.size = 0
         self.head = None
@@ -71,4 +71,4 @@ class LLQueue:
             return new_head
 
 array_queue = ArrQueue()
-LLQueue = LLQueue()
+LLQueue = Queue()

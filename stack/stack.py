@@ -38,7 +38,7 @@ class Node:
         self.value = value
         self.next_node = next_node
         
-class LLStack:
+class Stack:
     def __init__(self):
         self.size = 0
         # self.storage = ?
@@ -73,5 +73,5 @@ class LLStack:
             
 
 arr_stack = ArrStack()
-LLStack = LLStack()
+LLStack = Stack()
             
